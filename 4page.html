@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Auto Detailing</title>
+  <style>
+    /* ------------------ Updated CSS per Assignment ------------------ */
+    
+    /* Body: Set all text to blue, update font family and size */
+    body {
+      color: blue;  /* All text will appear blue */
+      font-family: Cambria, Georgia, "Book Antiqua", serif;
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    
+    /* h1 remains as is (used for major headings) */
+    h1 {
+      color: #333;
+    }
+    
+    /* h2: Change heading color and add background with fit-content */
+    h2 {
+      color: palevioletred;
+      background-color: seashell;
+      width: fit-content;
+      padding: 5px;
+      font-weight: bolder;
+    }
+    
+    /* Strong and em elements: Change background and make text italic */
+    strong, em {
+      background-color: lightyellow;
+      font-style: italic;
+    }
+    
+    /* Link styling for various states */
+    a:link {
+      color: darkgreen;
+    }
+    a:visited {
+      color: purple;
+    }
+    a:hover {
+      color: orange;
+    }
+    a:active {
+      color: red;
+    }
+    
+    /* ------------------ Original Detailing Site CSS ------------------ */
+    
+    /* Navigation styling */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      background-color: #ff0066;
+      text-align: center;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+    
+    /* Section styling: initially hidden and with padding */
+    section {
+      padding: 40px;
+      text-align: center;
+      display: none; /* Initially hide all sections */
+    }
+    #home {
+      background-color: #ffcccb;
+    }
+    #services {
+      background-color: #fff;
+    }
+    #about {
+      background-color: #e0e0e0;
+    }
+    
+    /* Image styling */
+    img {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('services')">Services</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Shiny Auto Detailing</h1>
+    <p>We provide top-notch detailing services to make your car look brand new!</p>
+    <img src="mercedes/mercedescar1.jpg" alt="Detailed Car">
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h1>Our Detailing Services</h1>
+    <div>
+      <h2>Full Exterior Detail</h2>
+      <p>Deep cleaning, waxing, and polishing to make your car shine like new.</p>
+    </div>
+    <div>
+      <h2>Interior Detail</h2>
+      <p>Thorough cleaning of your car’s interior, including upholstery and carpets.</p>
+    </div>
+    <div>
+      <h2>Engine Bay Cleaning</h2>
+      <p>Cleaning and degreasing your engine bay for a pristine look.</p>
+    </div>
+    <img src="mercedes/mercedescar3.jpg" alt="Car Detailing Service">
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Shiny Auto Detailing</h1>
+    <p>At Shiny Auto Detailing, we specialize in deep cleaning, waxing, and polishing to keep your car looking its best.</p>
+    <p>Our expert team ensures your car receives the highest level of care, using premium products to achieve a spotless, long-lasting finish.</p>
+    <img src="mercedes/mercedescar2.jpg" alt="Car Detailing in Progress">
+  </section>
+
+  <script>
+    // Function to show the selected section
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.style.display = 'none');
+      
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block';
+    }
+
+    // Initially display the home section
+    showSection('home');
+  </script>
+
+</body>
+</html>
